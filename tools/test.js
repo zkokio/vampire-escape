@@ -70,3 +70,11 @@ log = []; g3.command("read grave"); if (!/teeth/i.test(log.join())) { failures++
 
 console.log(failures ? "\n✖ " + failures + " problem(s)" : "✔ ALL TESTS PASSED");
 process.exitCode = failures ? 1 : 0;
+
+// Built-in side quest: The Ice House
+S.addPack(readPack(path.join(root, "packs/icehouse.js")));
+const g4 = new S.Engine({ out: t => log.push(t) }); g4.newGame();
+g4.command("light candle"); g4.state.room = "castle:graveyard"; g4.state.pack = "castle";
+log = []; ["d", "f", "use candle on block", "take locket", "give locket to ghost", "b", "u"].forEach(c => g4.command(c));
+if (!/Thank you/.test(log.join()) || g4.state.room !== "castle:graveyard") { console.log("✖ ice house", log.join("\n")); process.exitCode = 1; }
+else console.log("✔ Ice House side quest OK");

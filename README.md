@@ -8,6 +8,7 @@ A gothic text adventure in the style of Commodore 64 games. You are Jonathan Gre
 - **The midnight clock:** each floor has its own clock. If midnight strikes, Mortimer the butler carries you back up a floor (you keep what you've found)
 - **The chase:** when the deed burns, the Count wakes. `RUN` and a direction to stay ahead; garlic, holy water, the bat whistle and the stake slow him down
 - Characters: the Countess, Mortimer the butler, Gertie, Flit the bat, Ivan Petrov, Nightshade the mare, Snapdragon, Sir Clank, the villagers
+- Built-in side quest: **The Ice House** (DOWN from the graveyard)
 - 6 cursed **curios** to collect, hidden **secrets**, and a story told through scraps on the back of every deed piece
 - Two-word parser with typo correction, `GO TO <place>`, sanctuary candles that save your progress, save codes for other devices
 
